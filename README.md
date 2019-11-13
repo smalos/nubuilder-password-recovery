@@ -1,7 +1,18 @@
 # nubuilder-password-recovery
 
-1) Create a new table "password_request" (e.g. execute the sql below in phpMyAdmin).
-We need a dedicated table in our database to store the renewal token, The table also stores its expiration date, (nuBuilder) user id, email address and usage date.
+## What is it and how does it work?
+
+This self-service Password Reset process enables a user to reset the password without assistance of the nuBuilder administrator.
+The user goes to the nuBuilder login page and then clicks the "Forgot password?" link. 
+The user is then asked for the email address that is associated with the nuBuilder account. 
+If correct, an email is sent with a unique link. The link is valid for a period that you specify. 
+The link will take the user to a reset password page where a new password can be entered.
+
+## Setting up the script
+
+1) Create a new table "password_request" (by running the sql below in phpMyAdmin).
+We need a dedicated table in our database to store the access code. 
+That table also stores its expiration date, (nuBuilder) user id, email address and usage date.
 In this way we also see who requested a new password, when and if it has been used.
 
 ```
@@ -21,10 +32,10 @@ ALTER TABLE `password_request`
   MODIFY `password_request_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 ```
 
-2. In the nuBuilder root  directory, create a new folder /libs/password-recovery/. 
-Download the files in this GitHub repository and unzip the files into the password-recovery folder.
+2. Create a new folder /libs/password-recovery/ in the root directory of nuBuilder.
+Download the files in this GitHub repository and unzip the files into that password-recovery folder.
 
-3.  Edit config.php and change the values of the following variables:
+3.  Edit /config/config.php and change the values of the following variables:
 - $site_name
 - $login_url
 - $home_url
@@ -71,3 +82,8 @@ $nuWelcomeBodyInnerHTML         = "
             
          </div>
 ```
+## Credits
+
+The source code is based on this [Tutorial](https://www.codeofaninja.com/2013/03/php-login-script.html) and
+has been modified and improved to make it work with nuBuilder.
+
