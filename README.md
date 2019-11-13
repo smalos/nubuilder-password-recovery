@@ -30,6 +30,43 @@ ALTER TABLE `password_request`
 - $from_name
 - $from_email
 
-4. Modify nuConfig.php as shown here: 
-https://forums.nubuilder.com/viewtopic.php?f=19&t=10108&p=19873#p19873
-This is to to add a "Forgot Password?" link below the login button.
+4. Modify nuConfig.php to add a "Forgot Password?" link below the login button.
+(Remove the commented-out code by deleting the /* and */ around $nuWelcomeBodyInnerHTML)
+
+
+```
+$nuWelcomeBodyInnerHTML         = "
+   
+   
+         <div id='outer' style='width:100%'>
+
+            <div id='login' class='nuLogin'>
+               <table>
+                  <tr>
+                     <td align='center' style='padding:0px 0px 0px 33px; text-align:center;'>
+                     <img src='graphics/logo.png'><br><br>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td><div style='width:90px'>Username</div><input class='nuLoginInput' id='nuusername'/><br><br></td>
+                  </tr>
+                  <tr>
+                     <td><div style='width:90px'>Password</div><input class='nuLoginInput' id='nupassword' type='password'  onkeypress='nuSubmit(event)'/><br></td>
+                  </tr>
+                  <tr>
+                     <td style='text-align:center' colspan='2'><br><br>
+                        <input id='submit' type='button' class='nuButton' onclick='nuLoginRequest()' value='Log in '/>
+                     </td>
+                  </tr>
+                  
+                  <tr>
+                  <td style='text-align:right' colspan='2'>
+                  <a target='_blank' href=\"libs/password-recovery\forgot_password.php" style=\"color: #667;\">Forgot Password?</a>
+                  </td>
+                  </tr>
+
+               </table>
+            </div>
+            
+         </div>
+```
