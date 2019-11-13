@@ -44,8 +44,10 @@ if ($_POST)
         {
 
             // send reset link
-            $body = "Hello,<br /><br />";
-            $body .= "You have requested a password reset. Please click the following link to reset your password:<br /> " . "{$home_url}reset_password/?access_code={$access_code}&id={$id}<br /><br />" . "Please note this link is only valid for the next hour. If you didn't request this email, please ignore it.<br /><br />" . "Thank you.";
+			$body = "Hello,<br /><br />";
+            $body .= "You have requested a password reset. Please click the following link to reset your password:<br /> <br> ";
+            $body .= "<a href={$home_url}reset_password.php/?access_code={$access_code}&id={$id}>Reset link</a>";
+            $body .= "<br><br>Please note this link is only valid for the next hour. If you didn't request this email, please ignore it.<br /><br />Thank you.";
 
             $subject = "Reset Password";
             $send_to_email = $_POST['email'];
@@ -83,20 +85,34 @@ if ($_POST)
 }
 else
 {
-    echo "<div class='alert alert-info'>Lost your Password? Please enter your email address. You will receive a link to reset your password.</div>";
+    echo "<div class='alert alert-info'>Forgot your Password? Please enter your email address. You will receive a link to reset your password.</div>";
 }
 
 // show reset password HTML form
 echo "<div class='col-md-4'></div>";
 echo "<div class='col-md-4'>";
 
+
 echo "<div class='account-wall'>
         <div id='my-tab-content' class='tab-content'>
             <div class='tab-pane active' id='login'>
                 <img class='profile-img' src='login-icon.png'>
                 <form class='form-signin' action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "' method='post'>
+				<fieldset>
+				<div class='form-group'>
+				<div class='input-group'>
+						
+				<span class='input-group-addon'><i class='glyphicon glyphicon-envelope color-blue'></i></span>
                     <input type='email' name='email' class='form-control' placeholder='Your email' required autofocus>
-                    <input type='submit' class='btn btn-lg btn-primary btn-block' value='Send Reset Link' style='margin-top:1em;' />
+				</div>
+					  </div>
+					  <div class='form-group'>
+					  
+				<input type='submit' class='btn btn-lg btn-primary btn-block' value='Send Reset Link' style='margin-top:1em;' />
+				
+				 </div>
+					</fieldset>					
+                </form>	
                 </form>
             </div>
         </div>

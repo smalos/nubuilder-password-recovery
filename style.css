@@ -8,10 +8,14 @@
  
 div#blueimp-gallery div.modal{ overflow: visible; }
 
-.alert {
-	margin: auto;     
+.alert {    
 	display: table;
+	margin: auto;
+	height: 30px;
+	line-height:30px;
+	padding:0px 15px;
 }
+
 
 .form-signin{
     max-width: 330px;

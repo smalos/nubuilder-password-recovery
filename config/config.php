@@ -12,12 +12,10 @@ session_start();
 $site_name = 'My nuBuilder Site';
  
 // home login url (nuBuilder login page). 
-// e.g. http://localhost/html/nuBuilder4/
-$login_url = "http://localhost/html/nuBuilder4/";
+$login_url = "https://localhost/html/nuBuilder4/";
  
 // Password Recovery URL (where forgot_password.php is)
-// e.g. http://localhost/html/nuBuilder4/libs/password-recovery/
-$home_url = "http://localhost/html/nuBuilder4/libs/password-recovery/";
+$home_url = "https://localhost/html/nuBuilder4/libs/password-recovery/";
 
 // Send email from (used to send the reset link)
 $from_name = "nuBuilder";

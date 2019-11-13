@@ -57,7 +57,7 @@ else
     }
     else
     {
-        echo "<div class='alert alert-info'>Enter a new password and click the 'Reset Password' button.</div>";
+        echo "<div  id='alert-info' class='alert alert-info'>Enter a new password and click the 'Reset Password' button.</div>";
     }
 
     echo "<form action='" . htmlspecialchars($_SERVER["PHP_SELF"]) . "?access_code={$access_code}&id={$id}' method='post'>
@@ -65,11 +65,16 @@ else
     <table style='margin-top: 20px' class='table table-hover table-responsive table-bordered'>
         <tr >
             <td align='right' style='max-width:160px'>New Password</td>
-            <td><input type='password' name='password' class='form-control' style='max-width:200px' required></td>
+            <td><input type='password' name='password' id='password' class='form-control' style='max-width:200px' required minLength=8 onkeyup='check()';></td>
         </tr>
-        <tr>
+		<tr >
+            <td align='right' style='max-width:160px'>Confirm Password</td>
+            <td><input type='password' name='confirm_password' id='confirm_password' class='form-control' style='max-width:200px;float:left' required minLength=8 onkeyup='check()';>  
+			</td>			
+		</tr>	
+		 <tr>
             <td></td>
-            <td><button type='submit' class='btn btn-primary'>Reset Password</button></td>
+            <td><button id='submit' type='submit' class='btn btn-primary' disabled>Reset Password</button></td>
         </tr>
     </table></div>
 	</form>";
@@ -77,6 +82,33 @@ else
 }
 
 echo "</div>";
+
+?>
+
+
+<script>
+var check = function() {
+	
+  document.getElementById('alert-info').classList.remove("alert-info");
+  var p = document.getElementById('password');
+  var c = document.getElementById('confirm_password');  
+  var a = document.getElementById('alert-info');
+  if (p.value == c.value) {
+	a.innerHTML = 'Passwords match.';
+	a.classList.remove("alert-danger");
+	a.classList.add("alert-success");	
+	document.getElementById("submit").disabled = false;
+  } else {
+ 	a.innerHTML = 'Passwords do not match.';
+	a.classList.add("alert-danger");
+	a.classList.remove("alert-success");
+	document.getElementById("submit").disabled = true;
+
+  }
+}
+</script> 
+
+<?php
 
 // include page footer HTML
 include_once "layout_foot.php";
