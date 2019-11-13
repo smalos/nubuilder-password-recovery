@@ -5,8 +5,7 @@
 This self-service Password Reset process enables a user to reset the password without assistance of the nuBuilder administrator.
 The user goes to the nuBuilder login page and then clicks the "Forgot password?" link. 
 The user is then asked for the email address that is associated with the nuBuilder account. 
-If correct, an email is sent with a unique link. The link is valid for a period that you specify. 
-The link will take the user to a reset password page where a new password can be entered.
+If correct, an email is sent with a unique link. The link is valid for a period that you specify and will take the user to a reset password page where a new password can be entered.
 
 ## Setting up the script
 
