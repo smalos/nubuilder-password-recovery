@@ -21,7 +21,8 @@ ALTER TABLE `password_request`
   MODIFY `password_request_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 ```
 
-2. In the nuBuilder root  directory, create a new folder /libs/password-recovery/. Unzip the files from the attachment and place them in the  password-recovery folder you created.
+2. In the nuBuilder root  directory, create a new folder /libs/password-recovery/. 
+Download the files in this GitHub repository and unzip the files into the password-recovery folder.
 
 3.  Edit config.php and change the values of the following variables:
 - $site_name
@@ -30,7 +31,7 @@ ALTER TABLE `password_request`
 - $from_name
 - $from_email
 
-4. Modify nuConfig.php to add a "Forgot Password?" link below the login button.
+4. Modify nuBuilder's nuConfig.php to add a "Forgot Password?" link below the login button on the login page.
 (Remove the commented-out code by deleting the /* and */ around $nuWelcomeBodyInnerHTML)
 
 
