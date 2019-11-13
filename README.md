@@ -4,6 +4,7 @@
 We need a dedicated table in our database to store the renewal token, The table also stores its expiration date, (nuBuilder) user id, email address and usage date.
 In this way we also see who requested a new password, when and if it has been used.
 
+```
 CREATE TABLE `password_request` (
   `password_request_id` int(10) UNSIGNED NOT NULL,
   `pw_user_id` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
@@ -18,6 +19,7 @@ ALTER TABLE `password_request`
 
 ALTER TABLE `password_request`
   MODIFY `password_request_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+```
 
 2. In the nuBuilder root  directory, create a new folder /libs/password-recovery/. Unzip the files from the attachment and place them in the  password-recovery folder you created.
 
