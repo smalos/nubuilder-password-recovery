@@ -24,11 +24,12 @@ ALTER TABLE `password_request`
 2. In the nuBuilder root  directory, create a new folder /libs/password-recovery/. Unzip the files from the attachment and place them in the  password-recovery folder you created.
 
 3.  Edit config.php and change the values of the following variables:
-$site_name
-$login_url
-$home_url
-$from_name
-$from_email
+- $site_name
+- $login_url
+- $home_url
+- $from_name
+- $from_email
 
-4. Modify nuConfig.php as shown here: https://forums.nubuilder.com/viewtopic.php?f=19&t=10108&p=19873#p19873
+4. Modify nuConfig.php as shown here: 
+https://forums.nubuilder.com/viewtopic.php?f=19&t=10108&p=19873#p19873
 This is to to add a "Forgot Password?" link below the login button.
