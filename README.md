@@ -7,6 +7,10 @@ The user goes to the nuBuilder login page and then clicks the "Forgot password?"
 The user is then asked for the email address that is associated with the nuBuilder account. 
 If correct, an email is sent with a unique link. The link is valid for a period that you specify and will take the user to a reset password page where a new password can be entered.
 
+<p align="center">
+  <img src="screenshots/02_forgot_password_enter_email.png" width="250">
+</p>
+
 ## Setting up the script
 
 1) Create a new table "password_request" (by running the sql below in phpMyAdmin).
