@@ -1,4 +1,4 @@
-# nubuilder-password-recovery
+# nuBuilder 4 - Self-Service Password Reset 
 
 ## What is it and how does it work?
 
