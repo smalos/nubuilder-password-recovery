@@ -44,7 +44,7 @@ Download the [files](https://github.com/smalos/nubuilder-password-recovery/archi
 - $from_name
 - $from_email
 
-4. Modify nuBuilder's nuConfig.php to add a "Forgot Password?" link below the login button on the login page.
+4. Modify *nuconfig.php* in nuBuilder's root directory to add a "Forgot Password?" link below the login button on the login page.
 (Remove the commented-out code by deleting the /* and */ around $nuWelcomeBodyInnerHTML)
 
 
@@ -75,7 +75,7 @@ $nuWelcomeBodyInnerHTML         = "
                   
                   <tr>
                   <td style='text-align:right' colspan='2'>
-                  <br><br> <a target='_blank' href=\"libs/password-recovery\forgot_password.php\" style=\"color: #667;\">Forgot Password?</a>
+                  <br><br> <a target='_blank' href=\"libs/password-recovery/forgot_password.php\" style=\"color: #667;\">Forgot Password?</a>
                   </td>
                   </tr>
 
