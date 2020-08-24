@@ -75,7 +75,7 @@ $nuWelcomeBodyInnerHTML         = "
                   
                   <tr>
                   <td style='text-align:right' colspan='2'>
-                  <a target='_blank' href=\"libs/password-recovery\forgot_password.php" style=\"color: #667;\">Forgot Password?</a>
+                  <br><br> <a target='_blank' href=\"libs/password-recovery\forgot_password.php\" style=\"color: #667;\">Forgot Password?</a>
                   </td>
                   </tr>
 
