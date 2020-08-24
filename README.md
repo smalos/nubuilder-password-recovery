@@ -35,7 +35,7 @@ ALTER TABLE `password_request`
 ```
 
 2. Create a new folder /libs/password-recovery/ in the root directory of nuBuilder.
-Download the files in this GitHub repository and unzip the files into that password-recovery folder.
+Download the [files](https://github.com/smalos/nubuilder-password-recovery/archive/master.zip) from this GitHub repository and unzip the files into that password-recovery folder.
 
 3.  Edit /config/config.php and change the values of the following variables:
 - $site_name
