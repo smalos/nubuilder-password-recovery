@@ -85,6 +85,9 @@ $nuWelcomeBodyInnerHTML         = "
          </div>
          ";
 ```
+
+5. On the Setup Tab of the Home Form, click the "Setup" Button to enter your Email Settings.
+
 ## Credits
 
 The source code is based on this [Tutorial](https://www.codeofaninja.com/2013/03/php-login-script.html) and
